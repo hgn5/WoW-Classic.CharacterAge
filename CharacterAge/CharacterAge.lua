@@ -83,7 +83,11 @@ end
 function getCurrentLevelXP_Percent()
     local currentXP = UnitXP("player")
     local nextLevelXP = UnitXPMax("player")
-    return tostring(math.floor(currentXP / nextLevelXP * 100 + .5))
+    local roundPercent = math.floor(currentXP / nextLevelXP * 100 + .5)
+    if roundPercent > 99 then
+        roundPercent = 99
+    end
+    return string.format("%02d", roundPercent)
 end
 
 function events:PLAYER_XP_UPDATE(...)
