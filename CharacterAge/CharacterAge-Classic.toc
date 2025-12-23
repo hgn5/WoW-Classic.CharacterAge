@@ -1,5 +1,6 @@
-## Interface: 11404
+## Interface: 11508
 ## Title: Character Age 0.0.2
+## Version: 0.0.2
 ## Author: Hagen Vingard
 
 main.lua
